@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fontClassNames } from "./ui/fonts";
+import Header from "./ui/header";
+import Footer from "./ui/footer";
 
 export const metadata: Metadata = {
   title: "Hrdaya yoga",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fontClassNames}>{children}</body>
+      <body className={fontClassNames}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

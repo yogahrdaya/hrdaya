@@ -17,6 +17,10 @@ const config: Config = {
         mainColor: "#EAE3D3",
         pointColor: "#7D604C",
       },
+      fontSize: {
+        visualTitle: "70px",
+        title: "32px",
+      },
     },
     fontFamily: {
       sans: ["var(--noto_sans_kr)"],

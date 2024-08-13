@@ -21,7 +21,7 @@ export default function Classes() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-5 my-[100px] relative flex flex-col justify-between min-h-[765px]">
-      <h2 className="font-serif">
+      <h2 className="font-serif text-title">
         <strong>Our Classes</strong>
       </h2>
 
@@ -29,7 +29,7 @@ export default function Classes() {
         {classesData.map((data, index) => (
           <li
             key={data.name}
-            className="border-t border-black max-w-[calc(50%-40px)] px-[20px]"
+            className="border-t border-black max-w-[calc(50%-40px)] px-[20px] text-[20px]"
           >
             <h3>
               <button
@@ -38,25 +38,27 @@ export default function Classes() {
               >
                 <span>{data.name}</span>
                 {selected === index && (
-                  <span className="text-pointColor text-[70px] absolute top-[16px] right-0">
-                    <Image src="/asterisk.svg" alt="" width={23} height={23} />
+                  <span className="text-pointColor text-[70px] absolute top-[18px] right-0">
+                    <Image src="/asterisk.svg" alt="" width={22} height={22} />
                   </span>
                 )}
               </button>
             </h3>
 
-            {selected === index && (
-              <div className="absolute top-0 right-0 bg-slate-50 w-[calc(50%-40px)] pb-[66.67%-40px] min-h-[765px]">
-                <Image
-                  src={data.image !== "" ? data.image : "/next.svg"}
-                  // width={574}
-                  // height={765}
-                  layout="fill"
-                  objectFit="cover"
-                  alt="이미지"
-                />
-              </div>
-            )}
+            <div
+              className={`absolute top-0 right-0 w-[calc(50%-40px)] pb-[66.67%-40px] min-h-[765px] transition-opacity duration-[500ms] ${
+                selected === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={`/main_classes_0${index + 1}.jpg`}
+                fill
+                alt={`흐르다야 요가 ${data.name} 수업`}
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </li>
         ))}
       </ul>

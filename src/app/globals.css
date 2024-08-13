@@ -11,3 +11,13 @@
     @apply bg-mainColor;
   }
 }
+
+@layer utilities {
+  .kv-swiper .swiper-pagination-bullet {
+    @apply w-[20px] h-[8px] border rounded-[10px] border-white bg-transparent opacity-100;
+  }
+
+  .kv-swiper .swiper-pagination-bullet-active {
+    @apply w-[20px] h-[8px] border rounded-[10px] border-white bg-white;
+  }
+}

@@ -1,11 +1,11 @@
 export default function About() {
   return (
-    <div className="h-[474px] flex justify-center items-center text-center">
-      <div className="max-w-screen-xl">
-        <h2 className="font-serif">
+    <div className="h-[474px] flex justify-center items-center text-center bg-[url('/main_about.jpg')] bg-repeat bg-fixed bg-center bg-size-[1920px] max-w-[1920px] mx-auto">
+      <div className="max-w-screen-xl text-white">
+        <h2 className="font-serif text-title">
           About <strong>Hrdaya Yoga</strong>
         </h2>
-        <p className="w-[270px] mt-[40px]">
+        <p className="w-[270px] mt-[40px] mx-auto">
           매일매일의 작은 시도와 변화가
           <br />
           나를 더 좋은 곳으로 데려갑니다.

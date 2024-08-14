@@ -11,7 +11,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="absolute top-[34px] w-full z-10">
+    <header className="absolute top-[34px] w-full max-w-[1920px] z-10">
       <div className="max-w-screen-xl mx-auto flex justify-between px-5">
         <Link href="/">
           <h1>

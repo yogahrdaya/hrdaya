@@ -20,7 +20,7 @@ export default function Classes() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-5 my-[100px] relative flex flex-col justify-between min-h-[765px]">
+    <div className="max-w-screen-xl mx-auto px-5 my-[100px] relative flex flex-col justify-between min-h-[765px] overflow-hidden">
       <h2 className="font-serif text-title">
         <strong>Our Classes</strong>
       </h2>
@@ -46,7 +46,7 @@ export default function Classes() {
             </h3>
 
             <div
-              className={`absolute top-0 right-0 w-[calc(50%-40px)] pb-[66.67%-40px] min-h-[765px] transition-opacity duration-[500ms] ${
+              className={`absolute top-0 right-0 w-[calc(50%-40px)] pb-[calc(65.67%-40px)] min-h-[765px] transition-opacity duration-[500ms] ${
                 selected === index ? "opacity-100" : "opacity-0"
               }`}
             >

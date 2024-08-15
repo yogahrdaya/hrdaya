@@ -17,7 +17,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              카카오채널 '삼송요가흐르다야' 문의
+              카카오채널 &apos;삼송요가흐르다야&apos; 문의
             </a>
             <br />-
           </li>

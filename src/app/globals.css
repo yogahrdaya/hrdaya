@@ -20,4 +20,26 @@
   .kv-swiper .swiper-pagination-bullet-active {
     @apply w-[20px] h-[8px] border rounded-[10px] border-white bg-white;
   }
+
+  .li-point::before {
+    content: "";
+    @apply absolute top-[20px] left-[48px] w-[20px] h-[4px] bg-[#7D604C];
+  }
+
+  .about-swiper .swiper-wrapper {
+    @apply xl:ml-[-370px] ml-[calc(-50vw_+_280px)];
+  }
+
+  .about-swiper .swiper-slide {
+    user-select: none;
+  }
+
+  .about-swiper .swiper-slide::after {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-black opacity-50 transition-opacity;
+  }
+
+  .about-swiper .swiper-slide.swiper-slide-active::after {
+    @apply opacity-0;
+  }
 }

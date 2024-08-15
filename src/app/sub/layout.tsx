@@ -27,10 +27,8 @@ export default function SubLayout({
           {title}
         </h2>
       </div>
-      <div className="">
-        <div className="max-w-screen-xl px-5 mx-auto pt-[100px] py-[140px]">
-          {children}
-        </div>
+      <div className="max-w-screen-xl px-5 mx-auto pt-[100px] py-[140px]">
+        {children}
       </div>
     </main>
   );

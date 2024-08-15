@@ -1,4 +1,4 @@
-"use client"; // 클라이언트 사이드에서만 렌더링하도록 설정
+"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

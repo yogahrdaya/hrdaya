@@ -61,12 +61,12 @@ export default function Page() {
           <Image
             src="/about_mona.jpg"
             fill
-            alt="흐르다야 요가 수업"
+            alt="흐르다야 요가 - 모나"
             quality={100}
             className="object-cover "
           />
         </div>
-        <div className="w-full border border-t-black ">
+        <div className="w-full border-t border-black ">
           <h3 className="mt-[50px] text-title">
             <p className="font-bold">
               <span className="font-serif">HRDAYA YOGA</span> 대표원장

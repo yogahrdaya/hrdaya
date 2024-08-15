@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="h-[630px] flex justify-center items-center text-center bg-[url('/main_contact.jpg')] bg-repeat bg-center bg-size-[1920px]">
+    <div className="h-[630px] flex justify-center items-center text-center bg-[url('/hrdaya/main_contact.jpg')] bg-repeat bg-center bg-size-[1920px]">
       <div className="max-w-screen-xl">
         <h2 className="font-serif text-title">
           Contact <strong>Hrdaya Yoga</strong>

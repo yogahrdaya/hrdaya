@@ -1,6 +1,12 @@
 export default function About() {
   return (
-    <div className="h-[474px] flex justify-center items-center text-center bg-[url('/main_about.jpg')] bg-repeat bg-fixed bg-center bg-size-[1920px]">
+    <div
+      className="h-[474px] flex justify-center items-center text-center bg-repeat bg-fixed bg-center"
+      style={{
+        backgroundImage: `url(/hrdaya/main_about.jpg)`,
+        backgroundSize: "1920px",
+      }}
+    >
       <div className="max-w-screen-xl text-white">
         <h2 className="font-serif text-title">
           About <strong>Hrdaya Yoga</strong>

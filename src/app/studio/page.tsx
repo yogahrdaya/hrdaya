@@ -84,10 +84,11 @@ export default function Page() {
             <li key={data.name}>
               <a href={data.link} target="_blank" rel="noopener noreferrer">
                 <Image
-                  src={data.image}
+                  src={`${nextConfig.basePath}${data.image}`}
                   alt={data.name}
                   width={60}
                   height={60}
+                  quality={100}
                 />
               </a>
             </li>

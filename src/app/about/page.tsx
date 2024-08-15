@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SubLayout from "../sub/layout";
+import SubLayout from "../ui/subLayout";
 import { SetStateAction, useState } from "react";
 
 const tabData = [

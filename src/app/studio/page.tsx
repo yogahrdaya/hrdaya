@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SubLayout from "../sub/layout";
+import SubLayout from "../ui/subLayout";
 
 const linkData = [
   {

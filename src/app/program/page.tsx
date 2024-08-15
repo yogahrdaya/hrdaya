@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation"; // 네비게이션 스타일을 추가로 가져옵니다.
 import { useState } from "react";
 import Image from "next/image";
-import SubLayout from "../sub/layout";
+import SubLayout from "../ui/subLayout";
 
 const slideData = [
   {

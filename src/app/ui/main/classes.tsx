@@ -1,6 +1,7 @@
 "use client";
 import { SetStateAction, useState } from "react";
 import Image from "next/image";
+import nextConfig from "../../../../next.config.mjs";
 
 const classesData = [
   { name: "테라피월", image: "/vercel.svg" },
@@ -39,7 +40,12 @@ export default function Classes() {
                 <span>{data.name}</span>
                 {selected === index && (
                   <span className="text-pointColor text-[70px] absolute top-[18px] right-0">
-                    <Image src="/asterisk.svg" alt="" width={22} height={22} />
+                    <Image
+                      src={`${nextConfig.basePath}/asterisk.svg`}
+                      alt=""
+                      width={22}
+                      height={22}
+                    />
                   </span>
                 )}
               </button>
@@ -51,7 +57,7 @@ export default function Classes() {
               }`}
             >
               <Image
-                src={`/main_classes_0${index + 1}.jpg`}
+                src={`${nextConfig.basePath}/main_classes_0${index + 1}.jpg`}
                 fill
                 alt={`흐르다야 요가 ${data.name} 수업`}
                 quality={100}

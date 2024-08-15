@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SubLayout from "../ui/subLayout";
+import nextConfig from "../../../next.config.mjs";
 
 const linkData = [
   {
@@ -24,7 +25,7 @@ function LayoutTop({ images }: { images: number[] }) {
     <div className="flex gap-[20px] mt-[20px]">
       <div className="relative w-full max-w-[400px] h-[600px] overflow-hidden">
         <Image
-          src={`/studio_0${images[0]}.jpg`}
+          src={`${nextConfig.basePath}/studio_0${images[0]}.jpg`}
           fill
           alt={`흐르다야 스튜디오 ${images[0]}번째 이미지`}
           quality={100}
@@ -33,7 +34,7 @@ function LayoutTop({ images }: { images: number[] }) {
       </div>
       <div className="relative w-full max-w-[820px] h-[546px] overflow-hidden">
         <Image
-          src={`/studio_0${images[1]}.jpg`}
+          src={`${nextConfig.basePath}/studio_0${images[1]}.jpg`}
           fill
           alt={`흐르다야 스튜디오 ${images[1]}번째 이미지`}
           quality={100}
@@ -49,7 +50,7 @@ function LayoutBottom({ images }: { images: number[] }) {
     <div className="flex gap-[20px] items-end mt-[-34px]">
       <div className="relative w-full max-w-[820px] h-[546px] overflow-hidden">
         <Image
-          src={`/studio_0${images[0]}.jpg`}
+          src={`${nextConfig.basePath}/studio_0${images[0]}.jpg`}
           fill
           alt={`흐르다야 스튜디오 ${images[0]} 이미지`}
           quality={100}
@@ -58,7 +59,7 @@ function LayoutBottom({ images }: { images: number[] }) {
       </div>
       <div className="relative w-full max-w-[400px] h-[600px] overflow-hidden">
         <Image
-          src={`/studio_0${images[1]}.jpg`}
+          src={`${nextConfig.basePath}/studio_0${images[1]}.jpg`}
           fill
           alt={`흐르다야 스튜디오 ${images[1]} 이미지`}
           quality={100}

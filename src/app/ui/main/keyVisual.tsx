@@ -7,6 +7,7 @@ import "swiper/css/autoplay"; // Autoplay 스타일
 import "swiper/css/effect-fade"; // EffectFade 스타일
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import Image from "next/image";
+import nextConfig from "../../../../next.config.mjs";
 
 const slideData = [{ name: "slide 01" }, { name: "slide 02" }];
 
@@ -39,7 +40,7 @@ export default function KeyVisual() {
             </div>
             <div className="relative w-full h-[900px] max-w-[1920px] overflow-hidden mx-auto">
               <Image
-                src={`/kv_0${index + 1}.jpg`}
+                src={`${nextConfig.basePath}/kv_0${index + 1}.jpg`}
                 alt={`흐르다야 요가 키비주얼 ${index + 1}`}
                 fill
                 className="absolute inset-0 object-cover"

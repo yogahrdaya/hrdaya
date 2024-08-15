@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image"; // Ensure this import is correct
+import nextConfig from "../../../next.config.mjs";
 
 const links = [
   { name: "대표원장 소개", href: "/about" },
@@ -16,7 +17,7 @@ export default function Header() {
         <Link href="/">
           <h1>
             <Image
-              src="/logo.png"
+              src={`${nextConfig.basePath}/logo.png`}
               alt="logo"
               width={200}
               height={50}

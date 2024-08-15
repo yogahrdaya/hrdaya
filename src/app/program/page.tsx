@@ -7,6 +7,7 @@ import "swiper/css/navigation"; // 네비게이션 스타일을 추가로 가져
 import { useState } from "react";
 import Image from "next/image";
 import SubLayout from "../ui/subLayout";
+import nextConfig from "../../../next.config.mjs";
 
 const slideData = [
   {
@@ -70,7 +71,7 @@ export default function Page() {
         </div>
         <div className="relative w-full max-w-[540px] h-[720px] overflow-hidden">
           <Image
-            src="/program_mona.jpg"
+            src={`${nextConfig.basePath}/program_mona.jpg`}
             fill
             alt="흐르다야 요가 - 모나"
             className="object-cover"
@@ -97,10 +98,20 @@ export default function Page() {
           {/* Custom Navigation Buttons */}
           <div className="absolute top-0 right-0">
             <button className="custom-prev disabled:opacity-40 mr-[12px]">
-              <Image src={"/arrow.svg"} alt="prev" width={40} height={40} />
+              <Image
+                src={`${nextConfig.basePath}/arrow.svg`}
+                alt="prev"
+                width={40}
+                height={40}
+              />
             </button>
             <button className="custom-next disabled:opacity-40 transform rotate-180">
-              <Image src={"/arrow.svg"} alt="prev" width={40} height={40} />
+              <Image
+                src={`${nextConfig.basePath}/arrow.svg`}
+                alt="prev"
+                width={40}
+                height={40}
+              />
             </button>
           </div>
         </div>
@@ -127,7 +138,7 @@ export default function Page() {
               >
                 <div className="relative w-[500px] h-[500px]">
                   <Image
-                    src={`/program_0${index + 1}.jpg`}
+                    src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
                     alt={`흐르다야 요가의 ${data.title} 프로그램`}
                     fill
                     className="object-cover"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import nextConfig from "../../../next.config.mjs";
 
 interface SubLayoutProps {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ export default function SubLayout({
     <main>
       <div className="relative h-[400px] flex justify-center items-center">
         <Image
-          src={imageSrc}
+          src={`${nextConfig.basePath}${imageSrc}`}
           alt={title}
           fill
           className="absolute z-0 object-cover object-center"

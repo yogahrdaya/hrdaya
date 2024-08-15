@@ -1,7 +1,24 @@
+"use client";
+import Image from "next/image";
+import nextConfig from "../../../../next.config.mjs";
+
 export default function Contact() {
   return (
-    <div className="h-[630px] flex justify-center items-center text-center bg-[url('/hrdaya/main_contact.jpg')] bg-repeat bg-center bg-size-[1920px]">
-      <div className="max-w-screen-xl">
+    <div className="relative h-[630px] flex justify-center items-center text-center">
+      {/* 배경 이미지 */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={`${nextConfig.basePath}/main_contact.jpg`}
+          alt="Contact Background"
+          layout="fill"
+          objectFit="cover"
+          className="object-center"
+          quality={100}
+        />
+      </div>
+
+      {/* 콘텐츠 */}
+      <div className="relative z-10 max-w-screen-xl">
         <h2 className="font-serif text-title">
           Contact <strong>Hrdaya Yoga</strong>
         </h2>

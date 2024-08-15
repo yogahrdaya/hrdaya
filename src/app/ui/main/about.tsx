@@ -1,9 +1,11 @@
+import bgImage from "../../images/main_about.jpg";
+
 export default function About() {
   return (
     <div
       className="h-[474px] flex justify-center items-center text-center bg-repeat bg-fixed bg-center"
       style={{
-        backgroundImage: `url(/hrdaya/main_about.jpg)`,
+        backgroundImage: `url(${bgImage.src})`,
         backgroundSize: "1920px",
       }}
     >

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import SubLayout from "../ui/subLayout";
 import { SetStateAction, useState } from "react";
+import nextConfig from "../../../next.config.mjs";
 
 const tabData = [
   {
@@ -59,7 +60,7 @@ export default function Page() {
       <div className="flex gap-[78px]">
         <div className="relative w-full max-w-[540px] h-[720px] overflow-hidden">
           <Image
-            src="/about_mona.jpg"
+            src={`${nextConfig.basePath}/about_mona.jpg`}
             fill
             alt="흐르다야 요가 - 모나"
             quality={100}

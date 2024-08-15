@@ -20,8 +20,7 @@ export default function Header() {
               alt="logo"
               width={200}
               height={50}
-              // layout="intrinsic"
-              className="w-auto h-auto"
+              quality={100}
             />
           </h1>
         </Link>

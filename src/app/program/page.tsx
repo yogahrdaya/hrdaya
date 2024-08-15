@@ -73,8 +73,8 @@ export default function Page() {
             src="/program_mona.jpg"
             fill
             alt="흐르다야 요가 - 모나"
-            quality={100}
             className="object-cover"
+            quality={100}
           />
         </div>
       </div>
@@ -97,10 +97,10 @@ export default function Page() {
           {/* Custom Navigation Buttons */}
           <div className="absolute top-0 right-0">
             <button className="custom-prev disabled:opacity-40 mr-[12px]">
-              <Image src={"/arrow.png"} alt="prev" width={40} height={40} />
+              <Image src={"/arrow.svg"} alt="prev" width={40} height={40} />
             </button>
             <button className="custom-next disabled:opacity-40 transform rotate-180">
-              <Image src={"/arrow.png"} alt="prev" width={40} height={40} />
+              <Image src={"/arrow.svg"} alt="prev" width={40} height={40} />
             </button>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function Page() {
                     alt={`흐르다야 요가의 ${data.title} 프로그램`}
                     fill
                     className="object-cover"
-                    quality={90}
+                    quality={100}
                   />
                 </div>
               </SwiperSlide>

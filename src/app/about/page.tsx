@@ -56,32 +56,43 @@ export default function Page() {
   };
 
   return (
-    <SubLayout imageSrc="/about_kv.jpg" title="대표원장 소개">
+    <SubLayout imageSrc="about_kv.jpg" title="대표원장 소개">
       <div className="flex gap-[78px]">
-        <div className="relative w-full max-w-[540px] h-[720px] overflow-hidden">
+        <div className="relative hidden h-[720px] w-full max-w-[540px] overflow-hidden md:block">
           <Image
             src={`${nextConfig.basePath}/about_mona.jpg`}
             fill
             alt="흐르다야 요가 - 모나"
             quality={100}
-            className="object-cover "
+            className="object-cover"
           />
         </div>
-        <div className="w-full border-t border-black ">
-          <h3 className="mt-[50px] text-title">
+        <div className="w-full border-black md:border-t">
+          <h3 className="text-[26px] md:mt-[50px] md:text-title">
             <p className="font-bold">
               <span className="font-serif">HRDAYA YOGA</span> 대표원장
             </p>
-            <p>Mona (모나)</p>
+            <p className="text-[16px] md:text-[26px]">Mona (모나)</p>
           </h3>
 
-          <div className="relative mt-[96px]">
+          <div className="mt-[20px] md:hidden">
+            <Image
+              src={`${nextConfig.basePath}/about_mona.jpg`}
+              width={500}
+              height={466}
+              alt="흐르다야 요가 - 모나"
+              quality={100}
+              className="mx-auto h-full object-cover"
+            />
+          </div>
+
+          <div className="relative mt-[40px] md:mt-[96px]">
             <div className="flex">
               {tabData.map((data, index) => (
                 <button
                   key={data.tabName}
                   onClick={() => handleClick(index)}
-                  className={`border border-black rounded-[20px] p-[9px_25px_4px_25px] mr-[24px] ${
+                  className={`mr-[15px] rounded-[20px] border border-black p-[8px_16px] md:mr-[24px] md:p-[8px_25px] ${
                     selected === index && "bg-white"
                   }`}
                 >
@@ -93,12 +104,14 @@ export default function Page() {
             {tabData.map((data, index) => (
               <div key={data.tabName}>
                 {selected === index && (
-                  <ul className="mt-[40px] pl-[20px] list-disc">
+                  <ul className="mt-[20px] list-disc pl-[20px] md:mt-[40px]">
                     {data.tabList.map((listData) => (
                       <li
                         key={listData}
                         className={`${
-                          selected === 0 ? "leading-[28px]" : "leading-[25px]"
+                          selected === 0
+                            ? "leading-[28px]"
+                            : "leading-[28px] md:leading-[25px]"
                         }`}
                       >
                         {listData}

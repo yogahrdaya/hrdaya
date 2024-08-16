@@ -14,20 +14,28 @@ export default function SubLayout({
 }: SubLayoutProps) {
   return (
     <main>
-      <div className="relative h-[400px] flex justify-center items-center">
+      <div className="relative flex h-[145px] items-center justify-center md:h-[400px]">
         <Image
-          src={`${nextConfig.basePath}${imageSrc}`}
+          src={`${nextConfig.basePath}/${imageSrc}`}
           alt={title}
           fill
-          className="absolute z-0 object-cover object-center"
+          className="absolute z-0 hidden object-cover object-center md:block"
           quality={100}
           priority
         />
-        <h2 className="relative z-10 max-w-screen-xl px-5 w-full text-visualTitle">
+        <Image
+          src={`${nextConfig.basePath}/mo_${imageSrc}`}
+          alt={title}
+          fill
+          className="absolute z-0 object-cover object-center md:hidden"
+          quality={100}
+          priority
+        />
+        <h2 className="relative z-10 w-full max-w-screen-xl px-5 text-[35px] md:text-visualTitle">
           {title}
         </h2>
       </div>
-      <div className="max-w-screen-xl px-5 mx-auto pt-[100px] py-[140px]">
+      <div className="mx-auto max-w-screen-xl px-5 py-[60px] md:pb-[140px] md:pt-[100px]">
         {children}
       </div>
     </main>

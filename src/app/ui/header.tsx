@@ -93,7 +93,7 @@ export default function Header() {
                 >
                   <Link
                     href={data.href}
-                    className="align-sub md:pl-[40px]"
+                    className="align-sub text-base md:pl-[40px]"
                     onClick={closeMenu}
                   >
                     {data.name}

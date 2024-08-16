@@ -49,9 +49,9 @@ export default function Page() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <SubLayout imageSrc="/program_kv.jpg" title="프로그램 소개">
-      <div className="flex gap-[78px] mb-[80px] pb-[80px] border-b border-black">
-        <div className="w-full border-t border-black flex flex-col justify-between">
+    <SubLayout imageSrc="program_kv.jpg" title="프로그램 소개">
+      <div className="mb-[80px] flex gap-[78px] border-b border-black pb-[80px]">
+        <div className="flex w-full flex-col justify-between border-t border-black">
           <h3 className="mt-[50px] text-title">
             <p className="font-bold">
               <span className="font-serif">HRDAYA YOGA</span> 프로그램
@@ -62,14 +62,14 @@ export default function Page() {
             {slideData.map((data) => (
               <li
                 key={data.title}
-                className="relative li-point text-[26px] leading-[48px] pl-[100px]"
+                className="li-point relative pl-[100px] text-[26px] leading-[48px]"
               >
                 {data.title}
               </li>
             ))}
           </ul>
         </div>
-        <div className="relative w-full max-w-[540px] h-[720px] overflow-hidden">
+        <div className="relative h-[720px] w-full max-w-[540px] overflow-hidden">
           <Image
             src={`${nextConfig.basePath}/program_mona.jpg`}
             fill
@@ -87,8 +87,8 @@ export default function Page() {
             <div key={data.title}>
               {activeIndex === index && (
                 <>
-                  <h4 className="text-[24px] mb-[15px]">{data.title}</h4>
-                  <p className="max-w-[985px] min-h-[48px]">
+                  <h4 className="mb-[15px] text-[24px]">{data.title}</h4>
+                  <p className="min-h-[48px] max-w-[985px]">
                     {data.descripton}
                   </p>
                 </>
@@ -96,8 +96,8 @@ export default function Page() {
             </div>
           ))}
           {/* Custom Navigation Buttons */}
-          <div className="absolute top-0 right-0">
-            <button className="custom-prev disabled:opacity-40 mr-[12px]">
+          <div className="absolute right-0 top-0">
+            <button className="custom-prev mr-[12px] disabled:opacity-40">
               <Image
                 src={`${nextConfig.basePath}/arrow.svg`}
                 alt="prev"
@@ -105,7 +105,7 @@ export default function Page() {
                 height={40}
               />
             </button>
-            <button className="custom-next disabled:opacity-40 transform rotate-180">
+            <button className="custom-next rotate-180 transform disabled:opacity-40">
               <Image
                 src={`${nextConfig.basePath}/arrow.svg`}
                 alt="prev"
@@ -116,7 +116,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="absolute max-w-[1920px] left-0 right-0 mx-auto mt-[50px]">
+        <div className="absolute left-0 right-0 mx-auto mt-[50px] max-w-[1920px]">
           <Swiper
             spaceBetween={50}
             slidesPerView={"auto"}
@@ -136,7 +136,7 @@ export default function Page() {
                   width: "500px",
                 }}
               >
-                <div className="relative w-[500px] h-[500px]">
+                <div className="relative h-[500px] w-[500px]">
                   <Image
                     src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
                     alt={`흐르다야 요가의 ${data.title} 프로그램`}

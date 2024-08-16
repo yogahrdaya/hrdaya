@@ -55,7 +55,7 @@ function LayoutBottom({ images }: { images: number[] }) {
 
 export default function Page() {
   return (
-    <SubLayout imageSrc="/studio_kv.jpg" title="스튜디오 소개">
+    <SubLayout imageSrc="studio_kv.jpg" title="스튜디오 소개">
       <div className="flex w-full items-center justify-between border-t border-black pt-[43px]">
         <h3 className="text-title">
           <p className="font-bold">

@@ -44,6 +44,7 @@ export default function KeyVisual() {
                 alt={`흐르다야 요가 키비주얼 ${index + 1}`}
                 fill
                 className="absolute inset-0 object-cover"
+                quality={100}
               />
             </div>
           </SwiperSlide>

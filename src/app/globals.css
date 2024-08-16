@@ -37,7 +37,7 @@
 
   .nav-point::before {
     content: "";
-    @apply point-bar absolute left-[0] top-[12px] md:hidden;
+    @apply absolute left-[0] top-[12px] h-[4px] w-[20px] bg-[#7D604C] md:hidden;
   }
 
   .about-swiper .swiper-wrapper {

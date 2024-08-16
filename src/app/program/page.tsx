@@ -81,7 +81,7 @@ export default function Page() {
       </div>
 
       {/* slide */}
-      <div className="h-[670px]">
+      <div className="h-[calc(165px + (100vw - 40px) + 20px)] md:h-[670px]">
         <div className="relative">
           {slideData.map((data, index) => (
             <div key={data.title}>
@@ -118,7 +118,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="absolute left-0 right-0 mx-auto mt-[50px] max-w-[1920px]">
+        <div className="left-0 right-0 mx-auto mt-[20px] max-w-[1920px] md:absolute md:mt-[50px]">
           <Swiper
             spaceBetween={50}
             slidesPerView={"auto"}
@@ -135,10 +135,10 @@ export default function Page() {
               <SwiperSlide
                 key={data.title}
                 style={{
-                  width: "500px",
+                  width: window.innerWidth <= 768 ? "auto" : "500px",
                 }}
               >
-                <div className="relative h-[500px] w-[500px]">
+                <div className="relative h-[calc(100vw-40px)] w-[calc(100vw-40px)] md:h-[500px] md:w-[500px]">
                   <Image
                     src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
                     alt={`흐르다야 요가의 ${data.title} 프로그램`}

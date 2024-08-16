@@ -3,17 +3,17 @@ import bgImage from "../../images/main_about.jpg";
 export default function About() {
   return (
     <div
-      className="h-[474px] flex justify-center items-center text-center bg-repeat bg-fixed bg-center"
+      className="flex h-[450px] items-center justify-center bg-fixed bg-center bg-repeat text-center md:h-[474px]"
       style={{
         backgroundImage: `url(${bgImage.src})`,
         backgroundSize: "1920px",
       }}
     >
       <div className="max-w-screen-xl text-white">
-        <h2 className="font-serif text-title">
+        <h2 className="font-serif text-[22px] md:text-title">
           About <strong>Hrdaya Yoga</strong>
         </h2>
-        <p className="w-[270px] mt-[40px] mx-auto">
+        <p className="mx-auto mt-[57px] w-[240px] md:mt-[40px] md:w-[280px]">
           매일매일의 작은 시도와 변화가
           <br />
           나를 더 좋은 곳으로 데려갑니다.

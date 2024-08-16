@@ -16,9 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontClassNames} mx-auto max-w-[1920px]`}>
+      <body className={`${fontClassNames} md:mx-auto md:max-w-[1920px]`}>
         <Header />
-        {children}
+        <div className="pt-[70px] font-sans text-[14px] md:pt-0 md:text-[16px]">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

@@ -4,7 +4,7 @@ import nextConfig from "../../../../next.config.mjs";
 
 export default function Contact() {
   return (
-    <div className="relative h-[630px] flex justify-center items-center text-center">
+    <div className="relative flex h-[484px] items-center justify-center text-center md:h-[630px]">
       {/* 배경 이미지 */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -12,17 +12,25 @@ export default function Contact() {
           alt="Contact Background"
           layout="fill"
           objectFit="cover"
-          className="object-center"
+          className="hidden object-center md:block"
+          quality={100}
+        />
+        <Image
+          src={`${nextConfig.basePath}/mo_main_contact.jpg`}
+          alt="Contact Background"
+          layout="fill"
+          objectFit="cover"
+          className="object-center md:hidden"
           quality={100}
         />
       </div>
 
       {/* 콘텐츠 */}
       <div className="relative z-10 max-w-screen-xl">
-        <h2 className="font-serif text-title">
+        <h2 className="font-serif text-[22px] font-[22px] md:text-title">
           Contact <strong>Hrdaya Yoga</strong>
         </h2>
-        <ul className="mt-[40px]">
+        <ul className="mt-[40px] font-[14px] md:font-[16px]">
           <li>
             070 4115 1080
             <br />-

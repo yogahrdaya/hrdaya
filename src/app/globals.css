@@ -21,6 +21,11 @@
     @apply h-[8px] w-[20px] rounded-[10px] border border-white bg-white;
   }
 
+  .classes-list::after {
+    content: "";
+    @apply absolute right-[-12px] top-[3px] h-[15px] w-[1px] bg-[#000] md:hidden;
+  }
+
   .point-bar {
     @apply h-[4px] w-[20px] bg-[#7D604C];
   }

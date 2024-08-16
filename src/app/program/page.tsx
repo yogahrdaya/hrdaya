@@ -50,26 +50,26 @@ export default function Page() {
 
   return (
     <SubLayout imageSrc="program_kv.jpg" title="프로그램 소개">
-      <div className="mb-[80px] flex gap-[78px] border-b border-black pb-[80px]">
-        <div className="flex w-full flex-col justify-between border-t border-black">
-          <h3 className="mt-[50px] text-title">
+      <div className="mb-[40px] flex gap-[78px] border-b border-black pb-[40px] md:mb-[80px] md:pb-[80px]">
+        <div className="flex w-full flex-col justify-between border-black md:border-t">
+          <h3 className="text-[26px] md:mt-[50px] md:text-title">
             <p className="font-bold">
               <span className="font-serif">HRDAYA YOGA</span> 프로그램
             </p>
           </h3>
 
-          <ul>
+          <ul className="mt-[20px] md:mt-0">
             {slideData.map((data) => (
               <li
                 key={data.title}
-                className="li-point relative pl-[100px] text-[26px] leading-[48px]"
+                className="li-point relative pl-[30px] text-[14px] leading-[27px] md:pl-[100px] md:text-[26px] md:leading-[48px]"
               >
                 {data.title}
               </li>
             ))}
           </ul>
         </div>
-        <div className="relative h-[720px] w-full max-w-[540px] overflow-hidden">
+        <div className="relative hidden h-[720px] w-full max-w-[540px] overflow-hidden md:block">
           <Image
             src={`${nextConfig.basePath}/program_mona.jpg`}
             fill
@@ -87,8 +87,10 @@ export default function Page() {
             <div key={data.title}>
               {activeIndex === index && (
                 <>
-                  <h4 className="mb-[15px] text-[24px]">{data.title}</h4>
-                  <p className="min-h-[48px] max-w-[985px]">
+                  <h4 className="mb-[20px] text-[20px] md:mb-[15px] md:text-[24px]">
+                    {data.title}
+                  </h4>
+                  <p className="min-h-[135px] max-w-[985px] leading-[27px] md:min-h-[48px] md:leading-normal">
                     {data.descripton}
                   </p>
                 </>
@@ -97,7 +99,7 @@ export default function Page() {
           ))}
           {/* Custom Navigation Buttons */}
           <div className="absolute right-0 top-0">
-            <button className="custom-prev mr-[12px] disabled:opacity-40">
+            <button className="custom-prev mr-[12px] w-[25px] disabled:opacity-40 md:w-auto">
               <Image
                 src={`${nextConfig.basePath}/arrow.svg`}
                 alt="prev"
@@ -105,7 +107,7 @@ export default function Page() {
                 height={40}
               />
             </button>
-            <button className="custom-next rotate-180 transform disabled:opacity-40">
+            <button className="custom-next w-[25px] rotate-180 transform disabled:opacity-40 md:w-auto">
               <Image
                 src={`${nextConfig.basePath}/arrow.svg`}
                 alt="prev"

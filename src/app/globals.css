@@ -27,12 +27,12 @@
   }
 
   .point-bar {
-    @apply h-[4px] w-[20px] bg-[#7D604C];
+    @apply h-[2px] w-[12px] bg-[#7D604C] md:h-[4px] md:w-[20px];
   }
 
   .li-point::before {
     content: "";
-    @apply point-bar absolute left-[48px] top-[20px];
+    @apply point-bar absolute left-[0px] top-[12px] md:left-[48px] md:top-[20px];
   }
 
   .nav-point::before {
@@ -41,7 +41,7 @@
   }
 
   .about-swiper .swiper-wrapper {
-    @apply ml-[calc(-50vw_+_280px)] xl:ml-[-370px];
+    @apply md:ml-[calc(-50vw_+_280px)] xl:ml-[-370px];
   }
 
   .about-swiper .swiper-slide {

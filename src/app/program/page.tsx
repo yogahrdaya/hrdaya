@@ -132,20 +132,17 @@ export default function Page() {
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
             {slideData.map((data, index) => (
-              <SwiperSlide
-                key={data.title}
-                style={{
-                  width: window.innerWidth <= 768 ? "auto" : "500px",
-                }}
-              >
-                <div className="relative h-[calc(100vw-40px)] w-[calc(100vw-40px)] md:h-[500px] md:w-[500px]">
-                  <Image
-                    src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
-                    alt={`흐르다야 요가의 ${data.title} 프로그램`}
-                    fill
-                    className="object-cover"
-                    quality={100}
-                  />
+              <SwiperSlide key={data.title} style={{ width: "auto" }}>
+                <div className="md:w-[500px]">
+                  <div className="relative h-[calc(100vw-40px)] w-[calc(100vw-40px)] md:h-[500px] md:w-[500px]">
+                    <Image
+                      src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
+                      alt={`흐르다야 요가의 ${data.title} 프로그램`}
+                      fill
+                      className="object-cover"
+                      quality={100}
+                    />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

@@ -26,7 +26,7 @@ export default function Classes() {
         <strong>Our Classes</strong>
       </h2>
 
-      <ul className="flex-wrax flex flex-wrap gap-x-[24px] md:block">
+      <ul className="flex-wrax flex flex-wrap gap-x-[24px] pb-[calc(100vw-29px)] md:block md:pb-0">
         {classesData.map((data, index) => (
           <li
             key={data.name}
@@ -51,31 +51,32 @@ export default function Classes() {
               </button>
             </h3>
 
-            {/* <div
-              className={`absolute right-0 top-0 min-h-[765px] w-[calc(50%-40px)] pb-[calc(65.67%-40px)] transition-opacity duration-[500ms] ${
-                selected === index ? "opacity-100" : "opacity-0"
-              }`}
-            > */}
             <div
-              className={`absolute left-[20px] top-[130px] min-h-[350px] w-[350px] transition-opacity duration-[500ms] md:left-auto md:right-0 md:top-0 md:min-h-[765px] md:w-[calc(50%-40px)] md:pb-[calc(65.67%-40px)] ${
+              className={`absolute left-[50%] top-[130px] h-[calc(100vw-40px)] min-h-[350px] w-[calc(100vw-40px)] translate-x-[-50%] transition-opacity duration-[500ms] md:hidden ${
                 selected === index ? "opacity-100" : "opacity-0"
               }`}
             >
-              <Image
-                src={`${nextConfig.basePath}/main_classes_0${index + 1}.jpg`}
-                fill
-                alt={`흐르다야 요가 ${data.name} 수업`}
-                quality={100}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                className="hidden object-cover md:block"
-              />
               <Image
                 src={`${nextConfig.basePath}/program_0${index + 1}.jpg`}
                 fill
                 alt={`흐르다야 요가 ${data.name} 수업`}
                 quality={100}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                className="object-cover md:block"
+                className="object-cover"
+              />
+            </div>
+            <div
+              className={`absolute hidden h-[765px] max-w-[calc(50%-20px)] transition-opacity duration-[500ms] md:right-0 md:top-0 md:block ${
+                selected === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={`${nextConfig.basePath}/main_classes_0${index + 1}.jpg`}
+                alt={`흐르다야 요가 ${data.name} 수업`}
+                width={574}
+                height={765}
+                quality={100}
+                className="h-full w-auto object-cover"
               />
             </div>
           </li>

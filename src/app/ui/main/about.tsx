@@ -3,10 +3,9 @@ import bgImage from "../../images/main_about.jpg";
 export default function About() {
   return (
     <div
-      className="flex h-[450px] items-center justify-center bg-fixed bg-center bg-repeat text-center md:h-[474px]"
+      className="bg-size-200 flex h-[450px] items-center justify-center bg-top bg-repeat text-center md:h-[474px] md:bg-cover md:bg-fixed md:bg-center"
       style={{
         backgroundImage: `url(${bgImage.src})`,
-        backgroundSize: "1920px",
       }}
     >
       <div className="max-w-screen-xl text-white">

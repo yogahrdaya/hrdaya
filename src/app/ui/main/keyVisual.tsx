@@ -21,7 +21,7 @@ export default function KeyVisual() {
         slidesPerView={1}
         loop
         autoplay={{
-          delay: 3000,
+          delay: 300000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true, el: ".swiper-pagination" }}
@@ -29,12 +29,16 @@ export default function KeyVisual() {
       >
         {slideData.map((data, index) => (
           <SwiperSlide key={data.name}>
-            <div className="absolute left-0 right-0 top-0 z-10 mx-auto flex h-full max-w-screen-xl flex-col px-5 py-12 md:justify-center">
-              <h2 className="font-serif text-[40px] leading-[50px] text-pointColor md:text-visualTitle md:leading-normal">
-                Find <br className="md:hidden" />
-                Your Center
+            <div className="absolute left-0 right-0 top-0 z-10 mx-auto flex h-full max-w-screen-xl flex-col px-5 py-[55px] text-[#6E4930] md:justify-center">
+              <h2 className="font-serif text-[#6E4930]">
+                <p className="text-[22px] md:text-[45px] md:text-pointColor">
+                  HRDAYA YOGA
+                </p>
+                <p className="text-[35px] md:text-visualTitle">
+                  Find Your Center
+                </p>
               </h2>
-              <p className="mt-[90px] hidden text-[20px] md:block">
+              <p className="mt-[50px] hidden text-[20px] text-pointColor md:block">
                 마음의 중심을 찾는 공간, 흐르다야요가 <br />
                 외부세상에 흔들리지 않는 나만의 고요한 중심을 발견하세요.
               </p>

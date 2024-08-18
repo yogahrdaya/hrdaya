@@ -43,12 +43,12 @@ export default function Header() {
     <header className="fixed z-50 w-full max-w-[1920px] bg-white py-[17px] md:absolute md:top-[34px] md:bg-transparent md:px-0 md:py-0">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between px-5">
         <Link href="/" onClick={closeMenu}>
-          <h1 className="w-[150px] md:w-[200px]">
+          <h1 className="w-[30px] md:w-[40px]">
             <Image
-              src={`${nextConfig.basePath}/logo.png`}
+              src={`${nextConfig.basePath}/logo.svg`}
               alt="logo"
-              width={200}
-              height={50}
+              width={40}
+              height={40}
               quality={100}
             />
           </h1>

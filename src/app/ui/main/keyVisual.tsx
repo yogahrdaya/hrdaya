@@ -21,7 +21,7 @@ export default function KeyVisual() {
         slidesPerView={1}
         loop
         autoplay={{
-          delay: 300000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true, el: ".swiper-pagination" }}

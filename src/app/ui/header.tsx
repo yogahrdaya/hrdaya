@@ -83,7 +83,7 @@ export default function Header() {
             </label>
           </div>
           <div
-            className={`absolute left-0 top-[70px] h-[calc(100vh-70px)] w-full border-t-[2px] border-mainColor bg-white px-5 pb-[20px] pt-[32px] md:static md:flex md:h-auto md:border-0 md:border-t-0 md:bg-transparent md:p-0 ${isMenuOpen ? "flex flex-col justify-between" : "hidden"}`}
+            className={`absolute left-0 top-[70px] h-[calc(100dvh-70px)] w-full border-t-[2px] border-mainColor bg-white px-5 pb-[20px] pt-[32px] md:static md:flex md:h-auto md:border-0 md:border-t-0 md:bg-transparent md:p-0 ${isMenuOpen ? "flex flex-col justify-between" : "hidden"}`}
           >
             <ul className={`block md:flex`}>
               {links.map((data) => (

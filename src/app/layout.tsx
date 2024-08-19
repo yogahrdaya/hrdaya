@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fontClassNames } from "./ui/fonts";
-import Head from "next/head";
 import Header from "./ui/header";
 import Footer from "./ui/footer";
 
 export const metadata: Metadata = {
   title: "Hrdaya Yoga",
   description: "마음의 중심을 찾는 공간, 흐르다야요가",
+  metadataBase: new URL("https://yogahrdaya.github.io/"),
+  openGraph: {
+    images: "/og-image.png",
+  },
 };
 
 export default function RootLayout({

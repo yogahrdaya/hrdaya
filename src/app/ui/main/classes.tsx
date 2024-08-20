@@ -34,7 +34,7 @@ export default function Classes() {
           >
             <h3>
               <button
-                className={`classes-list relative w-full pb-[12px] text-left md:pt-[16px] ${selected === index ? "font-bold text-pointColor" : "font-normal"} md:font-normal md:text-black`}
+                className={`classes-list relative w-full pb-[12px] text-left md:pb-[14px] md:pt-[14px] ${selected === index ? "font-bold text-pointColor" : "font-normal"} md:font-normal md:text-black`}
                 onClick={() => handleClick(index)}
               >
                 <span>{data.name}</span>

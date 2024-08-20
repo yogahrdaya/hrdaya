@@ -7,7 +7,7 @@ import Footer from "./ui/footer";
 export const metadata: Metadata = {
   title: "Hrdaya Yoga",
   description: "마음의 중심을 찾는 공간, 흐르다야요가",
-  metadataBase: new URL("https://yogahrdaya.github.io/"),
+  metadataBase: new URL("https://hrdaya.co.kr/"),
   openGraph: {
     images: "/og-image.png",
   },

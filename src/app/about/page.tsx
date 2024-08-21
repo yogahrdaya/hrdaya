@@ -68,8 +68,8 @@ export default function Page() {
           />
         </div>
         <div className="w-full border-black md:border-t">
-          <h3 className="text-[26px] md:mt-[50px] md:text-title">
-            <p className="font-bold">
+          <h3 className="text-[26px] font-bold md:mt-[50px] md:text-title">
+            <p>
               <span className="font-serif">HRDAYA YOGA</span> 대표원장
             </p>
             <p className="text-[16px] md:text-[26px]">Mona (모나)</p>
